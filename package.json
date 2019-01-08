@@ -1,0 +1,23 @@
+{
+  "name": "kutuzov-bot",
+  "version": "0.0.1",
+  "description": "A simple Starcraft 2 bot.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "DEBUG=sc2:debug:* node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkurbatov/kutuzov-bot.git"
+  },
+  "author": "Alexander Kurbatov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alkurbatov/kutuzov-bot/issues"
+  },
+  "homepage": "https://github.com/alkurbatov/kutuzov-bot#readme",
+  "dependencies": {
+    "@node-sc2/core": "^0.8.2"
+  }
+}
