@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/alkurbatov/kutuzov-bot#readme",
   "dependencies": {
-    "@node-sc2/core": "^0.8.2"
+    "@node-sc2/core": "^0.8.2",
+    "eslint": "^5.12.0"
   }
 }
