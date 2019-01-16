@@ -21,6 +21,7 @@
         "ignoreUrls": true
       }
     ],
+    "no-console": "error",
     "quotes": [
       "error",
       "single"
