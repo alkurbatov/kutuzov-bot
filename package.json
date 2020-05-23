@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "start:debug": "DEBUG=sc2:debug:*,sc2:DrawDebug node src/index.js",
-    "test": "jest",
+    "test": "jest test/unit",
+    "test:manual": "node test/manual/index.js",
     "lint": "eslint src --color -f table"
   },
   "repository": {

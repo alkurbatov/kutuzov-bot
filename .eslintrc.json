@@ -46,6 +46,7 @@
         "ignoreUrls": true
       }
     ],
+    "no-console": "off",
     "no-continue": "off",
     "nonblock-statement-body-position": "off",
     "prettier/prettier": "error",
