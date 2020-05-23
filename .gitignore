@@ -1,1 +1,6 @@
+# Project configuration.
+config/*
+!/config/default.js
+
+# Dependencies.
 node_modules/
