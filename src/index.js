@@ -1,5 +1,3 @@
-'use strict'
-
 const { createAgent, createEngine, createPlayer } = require('@node-sc2/core')
 const { Difficulty, Race } = require('@node-sc2/core/constants/enums')
 
@@ -12,9 +10,11 @@ bot.use(fourRaxAllIn)
 
 const engine = createEngine()
 
-engine.connect().then(() => {
-  return engine.runGame('DiscoBloodbathLE.SC2Map', [
-    createPlayer({ race: Race.TERRAN }, bot),
-    createPlayer({ race: Race.TERRAN, difficulty: Difficulty.EASY }),
-  ])
-})
+engine
+  .connect()
+  .then(() =>
+    engine.runGame('DiscoBloodbathLE.SC2Map', [
+      createPlayer({ race: Race.TERRAN }, bot),
+      createPlayer({ race: Race.TERRAN, difficulty: Difficulty.EASY }),
+    ])
+  )

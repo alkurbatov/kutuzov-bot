@@ -1,11 +1,5 @@
-'use strict'
-
 const { createSystem, taskFunctions } = require('@node-sc2/core')
-const {
-  BARRACKS,
-  MARINE,
-  SUPPLYDEPOT,
-} = require('@node-sc2/core/constants/unit-type')
+const { BARRACKS, MARINE, SUPPLYDEPOT } = require('@node-sc2/core/constants/unit-type')
 const { MORPH_ORBITALCOMMAND } = require('@node-sc2/core/constants/ability')
 
 const { ability, build } = taskFunctions
@@ -26,19 +20,17 @@ const fourRaxAllIn = createSystem({
   ],
 
   async onUnitFinished({ resources }, newUnit) {
-    if (!newUnit.is(BARRACKS))
-      return
+    if (!newUnit.is(BARRACKS)) return
 
     // FIXME (alkurbatov): Set rally point on the nearest ramp.
     resources.get().actions.train(MARINE, newUnit)
   },
 
   async onUnitIdle({ resources }, idleUnit) {
-    if (!idleUnit.is(BARRACKS))
-      return
+    if (!idleUnit.is(BARRACKS)) return
 
     resources.get().actions.train(MARINE, idleUnit)
-  }
+  },
 })
 
 module.exports = fourRaxAllIn

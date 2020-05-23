@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": false,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "jest": {
+        "jestConfigFile": "./jest.config.js"
+      }
+    }
+  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "curly": [2, "multi"],
+    "indent": ["error", 2],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "linebreak-style": ["error", "unix"],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "no-continue": "off",
+    "nonblock-statement-body-position": "off",
+    "prettier/prettier": "error",
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "object-curly-newline": "off"
+  }
+}
