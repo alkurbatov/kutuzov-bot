@@ -1,6 +1,6 @@
 const { createSystem } = require('@node-sc2/core')
 const { ORBITALCOMMAND } = require('@node-sc2/core/constants/unit-type')
-const { EFFECT_CALLDOWNMULE } = require('@node-sc2/core/constants/ability')
+const { EFFECT_CALLDOWNMULE, RALLY_WORKERS } = require('@node-sc2/core/constants/ability')
 
 const { EnergyCost } = require('./constants')
 
@@ -22,6 +22,16 @@ const Mining = createSystem({
       const [target] = units.getClosest(orbital.pos, minerals, 1)
       actions.do(EFFECT_CALLDOWNMULE, orbital, { target })
     })
+  },
+
+  async onUnitCreated({ resources }, newUnit) {
+    if (!newUnit.isTownhall()) return
+
+    const { units, actions } = resources.get()
+
+    const minerals = units.getMineralFields()
+    const [target] = units.getClosest(newUnit.pos, minerals, 1)
+    actions.do(RALLY_WORKERS, newUnit, { target })
   },
 
   async onUnitIdle({ resources }, idleUnit) {
