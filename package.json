@@ -4,7 +4,8 @@
   "description": "A simple Starcraft 2 bot.",
   "main": "src/index.js",
   "scripts": {
-    "start": "DEBUG=sc2:debug:* node src/index.js",
+    "start": "node src/index.js",
+    "start:debug": "DEBUG=sc2:debug:*,sc2:DrawDebug node src/index.js",
     "test": "jest",
     "lint": "eslint src --color -f table"
   },
