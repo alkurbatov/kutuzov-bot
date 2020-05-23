@@ -13,7 +13,7 @@ bot.use(fourRaxAllIn)
 const engine = createEngine()
 
 engine.connect().then(() => {
-  return engine.runGame('Ladder2017Season3/InterloperLE.SC2Map', [
+  return engine.runGame('DiscoBloodbathLE.SC2Map', [
     createPlayer({ race: Race.TERRAN }, bot),
     createPlayer({ race: Race.TERRAN, difficulty: Difficulty.EASY }),
   ])
