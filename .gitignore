@@ -2,5 +2,8 @@
 config/*
 !/config/default.js
 
+# Build folder.
+dist/
+
 # Dependencies.
 node_modules/

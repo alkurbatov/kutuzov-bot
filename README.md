@@ -13,6 +13,12 @@ $ cp config/default.js config/development.js
 $ npm start
 ```
 
+## Bundling
+```bash
+# To create a unified bundle of bot sources and packages with nodejs runtime do:
+$ npm run build
+```
+
 ## Hacking && Testing
 ```bash
 # Run the bot with extended debug logs.
